@@ -4,7 +4,7 @@ function version {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  local ver_credstash="$(vendor/virtualenv/bin/pip list --format json 2>/dev/null | jq -r 'map(select(.name == "credstash"))[].version' || true)"
+  local ver_credstash="$($shome/vendor/virtualenv/bin/pip list --format json 2>/dev/null | jq -r 'map(select(.name == "credstash"))[].version' || true)"
   jq -n --arg credstash "$ver_credstash" '{credstash: $credstash}'
 }
 
