@@ -6,7 +6,7 @@ function _credstash_profile {
   #export ANSIBLE_ROLES_PATH="$shome/roles${ANSIBLE_ROLES_PATH:+:${ANSIBLE_ROLES_PATH}}"
   #export ANSIBLE_LIBRARY="$shome/library${ANSIBLE_LIBRARY:+:${ANSIBLE_LIBRARY}}"
 
-  CREDSTASH_VERSION='1.13.2'
+  CREDSTASH_VERSION="$(cat "$shome/.credstash-version.json" | jq -r '.[].version')"
 }
 
 _credstash_profile
