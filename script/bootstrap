@@ -4,7 +4,7 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  block compoile pipenv "$@"
+  block compile pipenv "$@"
   local pth_credstash="$(pipenv run which credstash)"
   mkdir -p "$shome/bin"
   ln -nfs "$pth_credstash" "$shome/bin/"
