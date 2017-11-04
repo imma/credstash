@@ -1,1 +1,14 @@
-../../Pipfile.credstash
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+credstash = "*"
+
+
+[dev-packages]
+
