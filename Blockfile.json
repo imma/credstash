@@ -1,4 +1,7 @@
 {
   "require": [
-  ]
+  ],
+  "versions": {
+    "credstash": "fugue/credstash"
+  }
 }
